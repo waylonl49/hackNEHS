@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Home Page{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="../static/style.css">
+<br>
+<br>
+<center>
+<h1><img src='{{source}}'></h1>
+<br>
+<h3 style='color: red'><b>{{covidp}}</b></h3>
+<h3 style='color: green;'><b>{{covidn}}</b></h3>
+<br>
+<br>
+<a href="/" style='margin-left: 50px;'>Click Here to go back to the Home Page</a>
+</center>
+
+
+{% endblock %}

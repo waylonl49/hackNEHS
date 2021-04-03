@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .submit {
+              background-color: #4CAF50;
+              border: none;
+              color: white;
+              padding: 8px 31px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 16px;
+              margin: 2px 1px;
+              cursor: pointer;
+            }
+
+            h1 {margin-left: 50px;
+                margin-top: 50px;
+            }
+            .logo img{
+            position:absolute;
+            margin: top 15px;;
+            margin-left: 10px;
+            }
+
+            
+            
+
+            </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    body {font-family: "Lato", sans-serif}
+    .mySlides {display: none}
+    </style>
+   </head>
+   <body>
+       <header>  
+    <div class="w3-top">
+        <div class="w3-bar w3-black w3-card">
+        <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        <div><a href="/" class="w3-bar-item w3-button w3-padding-large" >HOME</a></div>
+        
+        
+        <div class="w3-dropdown-hover w3-hide-small">
+            <button class="w3-padding-large w3-button" title="More">ASSISTANTS <i class="fa fa-caret-down"></i></button>     
+            <div class="w3-dropdown-content w3-bar-block w3-card-4">
+            <a href="/cardio" class="w3-bar-item w3-button">Cardiovascular Disease Virtual Assistant</a>
+            <a href="/covid19" class="w3-bar-item w3-button">Covid-19 Symptoms Assistant</a>
+            </div>
+            
+        </div>
+        <a href="/about" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
+        <img class='logo' src='https://images.cooltext.com/5518550.png' alt="logo" width=173 height=43> 
+
+        </div>
+    </div>
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+    </header>
+    <body>
+ 
+    
+</html>

@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block title %}Home Page{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="../static/style.css">
+<style>
+    p {
+
+    margin-right: 200px;
+    margin-left: 200px; 
+
+  }
+  
+  h1 {
+    margin-bottom: 30px;
+    margin-right: 50x;
+    margin-left: 200px;
+    margin-top: 50px;
+  }
+
+  h5 {
+      margin-left: 200px;
+      margin-right: 200px;
+      margin-bottom:20px;
+  }
+
+  h4 {
+
+    margin-right: 200px;
+    margin-left: 200px; 
+
+    }
+    h1 {
+    margin-right: 200px;
+    margin-left: 200px;
+    margin-top: 50px;
+    }
+
+    h5 {
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom:20px;
+    }
+    h2 {
+    margin-right: 200px;
+    margin-left: 200px;
+    }
+    .button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 21px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    }
+    p {
+    margin-right: 200px;
+    margin-left: 50px;
+    }
+
+
+
+</style>
+
+<h1 style='color: green'><b>Test result: Cardiovascular Disease unlikely</b></h1>
+<h2> No cardiovascular diseases were detected, keep being healthy!</h2>
+<h2>Inputs</h2>
+
+<h4 style='border-style:solid; border: width 3px;border-left-width: 3px; border-right-width: 3px; border-color: black; margin-right: 1150px;'>
+<p>Age: {{age}}</p>
+<p>Height: {{height}}</p>
+<p>Weight: {{weight}}</p>
+<p>Gender: {{gender}}</p>
+<p>Cholesterol Level: {{cholesterol}}</p>
+<p>Glucose Level: {{glucose}}</p>
+<p>Smoke: {{smoke}}</p>
+<p>Alcohol: {{alcohol}}</p>
+<p>Pyshically Active: {{active}}</p>
+</h4>
+{% endblock %}

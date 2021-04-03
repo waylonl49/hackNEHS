@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+{% block title %}Cardiovascular Virtual Assistant{% endblock %}
+
+{% block content %}
+<style>
+    h4 {
+
+    margin-right: 200px;
+    margin-left: 200px; 
+
+  }
+  
+  h1 {
+    margin-bottom: 30px;
+    margin-right: 50x;
+    margin-left: 200px;
+    margin-top: 50px;
+  }
+
+  h5 {
+      margin-left: 200px;
+      margin-right: 200px;
+      margin-bottom:20px;
+  }
+
+  h4 {
+
+    margin-right: 200px;
+    margin-left: 200px; 
+
+    }
+    h1 {
+    margin-right: 200px;
+    margin-left: 200px;
+    margin-top: 50px;
+    }
+
+    h5 {
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom:20px;
+    }
+    h2 {
+    margin-right: 200px;
+    margin-left: 200px;
+    }
+    .button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 21px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    }
+    p {
+    margin-right: 200px;
+    margin-left: 50px;
+    }
+
+
+
+</style>
+</style>
+<link rel="stylesheet" href="../static/style.css">
+
+
+<form action='/predictcardio' method='POST'>
+    <h1 style=>Cardiovascular Disease Virtual Assistant </h1>
+    <h4>(This data will not be stored in any way)</h4>
+    <p>Enter your age</p>
+    <p><input type='number' name='Age' /></p>
+    <p>Enter your height (In total inches)</p>
+    <p><input type='number' name='Height' /></p>
+    <p>Enter your weight (In pounds)</p>
+    <p><input type='number' name='Weight' /></p>
+    <p>Gender (1 for Female, 2 for Male)</p>
+    <p><input type='number' name='Gender' /></p>
+    <p>Estimated Cholesterol Level (1 for normal, 2 for above normal, 3 for well above normal)</p>
+    <p><input type='number' name='Cholesterol' /></p>
+    <p>Estimated Glucose level (1 for normal, 2 for above normal, 3 for well above normal)</p>
+    <p><input type='number' name='Glucose' /></p>
+
+    <p><b>Do you smoke often?</b></p>
+    <div style="margin-left: 50px;">
+        <input type="checkbox" id="Yess" name="Yess">
+        <label for="Nos">Yes</label>
+    </div>
+    
+    <div style="margin-left: 50px;">
+        <input type="checkbox" id="Nos" name="Nos">
+        <label for="Nos">No</label>
+    </div>
+
+    <p><b>Do you drink alcohol often?</b></p>
+    <div style="margin-left: 50px;">
+        <input type="checkbox" id="Yesalc" name="Yesalc">
+        <label for="Yesalc">Yes</label>
+    </div>
+    
+    <div style="margin-left: 50px;">
+        <input type="checkbox" id="Noalc" name="Noalc">
+        <label for="Noalc">No</label>
+    </div>
+
+    <p><b>Are you physically active everyday?</b></p>
+    <div style="margin-left: 50px;">
+        <input type="checkbox" id="Yesa" name="Yesa">
+        <label for="Yesa">Yes</label>
+    </div>
+    
+    <div style="margin-left: 50px;">
+        <input type="checkbox" id="Noa" name="Noa">
+        <label for="Noa">No</label>
+    </div>
+
+    <p><input type="submit" class="button" value="Get Results"></p>
+</form>
+
+<p style='margin-left: 200px;'><a href="/" style='margin-left: 50px;'>Click Here to go back to the Home Page</a></p>
+
+
+{% endblock %}

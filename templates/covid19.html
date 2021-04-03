@@ -1,0 +1,174 @@
+
+{% extends "base.html" %}
+{% block title %}Covid Symptoms{% endblock %}
+
+{% block content %}
+<style>
+    h4 {
+
+    margin-right: 200px;
+    margin-left: 200px; 
+
+  }
+  h1 {
+    margin-bottom: 30px;
+    margin-right: 200px;
+    margin-left: 200px;
+    margin-top: 100px;
+  }
+
+  h5 {
+      margin-left: 200px;
+      margin-right: 200px;
+      margin-bottom:20px;
+  }
+  h2 {
+    margin-right: 200px;
+    margin-left: 200px;
+  }
+  .button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 21px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    }
+
+
+</style>
+<link rel="stylesheet" href="../static/style.css">
+<form action='/predictcovid' method='post'>
+    <h1>Covid-19 Symptoms Checker </h1>
+    <h4>Check the correct values below for every question and predict when you are ready.</p>
+    
+    <p><b>Have you had a fever recently?</b></p>
+    <div>
+    <input type="checkbox" id="Truefever" name="Tfever">
+    <label for="Truefever">Yes</label>
+    </div>
+    <div>
+    <input type="checkbox" id="Falsefever" name="Ffever">
+    <label for="Falsefever">No</label>
+    </div>
+
+
+
+    <p><b>Have you been tired frequently lately?</b></p>
+
+    <div>
+    <input type="checkbox" id="Truetired" name="Ttired">
+    <label for="Truetired">Yes</label>
+    </div>
+
+    <div>
+    <input type="checkbox" id="Falsetired" name="Ftired">
+    <label for="Falsetired">No</label>
+    </div>
+
+
+
+    <p><b>Do you currently have a irritating/ dry cough?</b></p>
+
+    <div>
+    <input type="checkbox" id="Truecough" name="Tcough">
+    <label for="Truecough">Yes</label>
+    </div>
+
+    <div>
+    <input type="checkbox" id="Falsecough" name="Fcough">
+    <label for="Falsecough">No</label>
+    </div>
+
+
+    <p><b>Have you recently had difficulty breathing?</b></p>
+
+    <div>
+    <input type="checkbox" id="Truebreathing" name="Tbreathing">
+    <label for="Truebreathing">Yes</label>
+    </div>
+
+    <div>
+    <input type="checkbox" id="Falsebreathing" name="Fbreathing">
+    <label for="Falsebreathing">No</label>
+    </div>
+
+
+    <p><b>Have you had a sore throat recently?</b></p>
+
+    <div>
+    <input type="checkbox" id="Truesore" name="Tsore">
+    <label for="Truesore">Yes</label>
+    </div>
+
+    <div>
+    <input type="checkbox" id="Falsesore" name="Fsore">
+    <label for="Falsesore">No</label>
+    </div>
+
+    <p><b>Do you have any major pains in your body currently?</b></p>
+
+    <div>
+    <input type="checkbox" id="Truepain" name="Tpain">
+    <label for="Truepain">Yes</label>
+    </div>
+
+    <div>
+    <input type="checkbox" id="Falsepain" name="Fpain">
+    <label for="Falsepain">No</label>
+    </div>
+    
+    <p><b>Do you have any nasal congestion?</b></p>
+
+    <div>
+    <input type="checkbox" id="Truenasal" name="Tnasal">
+    <label for="Truenasal">Yes</label>
+    </div>
+
+    <div>
+    <input type="checkbox" id="Falsenasal" name="Fnasal">
+    <label for="Falsenasal">No</label>
+    </div>
+
+    <p><b>Do you have runny noses frequently?</b></p>
+
+    <div>
+    <input type="checkbox" id="Truerunny" name="Trunny">
+    <label for="Truerunny">Yes</label>
+    </div>
+
+    <div>
+    <input type="checkbox" id="Falserunny" name="Frunny">
+    <label for="Falserunny">No</label>
+    </div>
+
+
+
+    <p><b>Do you currently have diarrhea?</b></p>
+
+    <div>
+    <input type="checkbox" id="Truedia" name="Tria">
+    <label for="Truedia">Yes</label>
+    </div>
+
+    <div>
+    <input type="checkbox" id="Falsedia" name="Fria">
+    <label for="Falsedia">No</label>
+    </div>
+    <br>
+
+    <input type="submit" class="button" value="Check Symptoms">
+
+
+</h4></form>
+
+<a href="/" style='margin-left: 50px;'>Click Here to go back to the Home Page</a>
+
+
+{% endblock %}
+
+
