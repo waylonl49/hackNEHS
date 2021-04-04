@@ -3,39 +3,88 @@
 
 {% block content %}
 <style>
-    h4 {
+  h4 {
 
-    margin-right: 150px;
-    margin-left: 80px;
+  margin-right: 200px;
+  margin-left: 200px; 
+
+}
+
+h1 {
+  margin-bottom: 30px;
+  margin-right: 50x;
+  margin-left: 200px;
+  margin-top: 50px;
+}
+
+h5 {
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom:20px;
+}
+
+h4 {
+
+  margin-right: 200px;
+  margin-left: 200px; 
+
   }
   h1 {
-    margin-top:50px;
-    margin-right: 150px;
-    margin-left: 80px;
+  margin-right: 200px;
+  margin-left: 200px;
+  margin-top: 50px;
   }
 
   h5 {
-      margin-left: 80px;
-      margin-right: 150px;
-      margin-bottom:20px;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-bottom:20px;
   }
-
-
+  h2 {
+  margin-right: 200px;
+  margin-left: 200px;
+  }
+  .button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 21px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  }
+  p {
+  margin-right: 200px;
+  margin-left: 200px;
+  }
 </style>
+<head>
+  <title>Home Page</title>
+</head>
 <br>
 <br>
-<h1>Covid-19 Symptom/ Cardiovascular Disease Virtual Assistant</h1>
-<h4>Welcome! This website is designed to help determine whether or not you have Covid-19 or cardiovascular disease based on symptoms and phsyical details.</h4>
+<h1>Virtual Checkup Assistant</h1>
+<h4>Welcome! This website is designed to help act like a pediatrician checkup and can predict height, determining whether or not you have Covid-19 or a cardiovascualr disease based on given symptoms.</h4>
 <h4>Disclaimer: This website in no way replaces a medical professional and is just a virtual assistant for evaluating symptoms.</h4>
 <h4>
 <img src='https://www.assessmed.com/assessmed-content/uploads/2016/03/doctor.jpg' width=742 height=494 alt='doctor_eval'>
 </h4>
-<h4>
+<p>
 <a style='text-align: right;' href="/cardio">Click here for the Cardiovascular Disease Virtual Assistant</a>
 <br>
 <br>
+<a style='text-align: right;' href="/height">Click here for the Height Prediction Virtual Assistant</a>
+<br>
+<br>
 <a style='text-align: right;' href="/covid19">Click here for the Covid-19 Symptoms Virtual Assistant</a>
-</h4>
+<br>
+<br>
+<a style='text-align: right;' href="/lungcancer">Click here for the Lung Cancer Assistant</a>
+</p>
+
 
 
 {% endblock %}

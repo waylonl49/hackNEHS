@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% block title %}Height Assistant{% endblock %}
+
+{% block content %}
+<style>
+    h4 {
+
+    margin-right: 200px;
+    margin-left: 200px; 
+
+  }
+  
+  h1 {
+    margin-bottom: 30px;
+    margin-right: 50x;
+    margin-left: 200px;
+    margin-top: 50px;
+  }
+
+  h5 {
+      margin-left: 200px;
+      margin-right: 200px;
+      margin-bottom:20px;
+  }
+
+  h4 {
+
+    margin-right: 200px;
+    margin-left: 200px; 
+
+    }
+    h1 {
+    margin-right: 200px;
+    margin-left: 200px;
+    margin-top: 50px;
+    }
+
+    h5 {
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom:20px;
+    }
+    h2 {
+    margin-right: 200px;
+    margin-left: 200px;
+    }
+    .button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 21px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    }
+    p {
+    margin-right: 200px;
+    margin-left: 50px;
+    }
+</style>
+<head>
+    <title>Height Assistant</title>
+  </head>
+<link rel="stylesheet" href="../static/style.css">
+    <form action='/predictheight' method='post'>
+    
+    <h1>Height Prediction Assistant </h1>
+    <p><b>Your Gender</b></p>
+    <div style="margin-left: 50px;">
+        <input type="checkbox" id="Malegender" name="Malegender">
+        <label for="Malegender">Male</label>
+    </div>
+    <div style="margin-left: 50px;">
+        <input type="checkbox" id="Femalegender" name="Femalegender">
+        <label for="Malegender">Female</label>
+    </div>
+
+    <p>Biological Mother's Height (Inches)</p>
+        <p><input type='number' name='mother' min="10" max="84"/></p>
+    
+    <p>Biological Father's Height (Inches)</p>
+        <p><input type='number' name='father' min="10" max="84"/></p>
+
+        <p><input type="submit" class="button" value="Get Height"></p>
+    
+    
+    </h4>
+</form>
+    
+<p style='margin-left: 200px;'><a href="/" style='margin-left: 50px;'>Click Here to go back to the Home Page</a></p>
+
+
+    
+
+{% endblock %}

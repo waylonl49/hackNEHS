@@ -66,22 +66,19 @@
 
 </style>
 <head>
-  <title>Cardio Assistant</title>
+  <title>Lung Cancer Assistant</title>
 </head>
 <body>
-<h1 style='color: red;'><b>Test result: Cardiovascular Disease is highly likely</b></h1>
-<h2>Consult your doctor or physician to get treated immediately. We suggest exercising more and eating healthier foods after having a checkup with your doctor or physician. <a href='https://www.nia.nih.gov/health/infographics/diet-and-exercise-choices-today-healthier-tomorrow'>Click here for some more tips.</a></h2>
+<h1 style='color: green'><b>Result: Lung Cancer is unlikely</b></h1>
+<h2> You are not likely to have lung cancer. Stay safe and healthy.</h2>
 
 <h4 style='border-style:solid; border: width 3px;border-left-width: 3px; border-right-width: 3px; border-color: black; margin-right: 1150px;'>
-<p>Age: {{age}}</p>
-<p>Height: {{height}}</p>
-<p>Weight: {{weight}}</p>
-<p>Gender: {{gender}}</p>
-<p>Cholesterol Level: {{cholesterol}}</p>
-<p>Glucose Level: {{glucose}}</p>
-<p>Smoke: {{smoke}}</p>
-<p>Alcohol: {{alcohol}}</p>
-<p>Pyshically Active: {{active}}</p>
-</h4>
+    <p>Age: {{age}}</p>
+    <p>Smoke: {{newsmoke}}</p>
+    <p>Alcohol: {{newalcohol}}</p>
+    <p>Family History: {{newfamily}}</p>
+    <p>Diet: {{newdiet}}</p>
+    
+    </h4>
 </body>
 {% endblock %}

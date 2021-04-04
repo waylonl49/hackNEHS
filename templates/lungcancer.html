@@ -1,7 +1,8 @@
 {% extends "base.html" %}
-{% block title %}Cardiovascular Virtual Assistant{% endblock %}
+{% block title %}Lung Cancer Virtual Assistant{% endblock %}
 
 {% block content %}
+
 <style>
     h4 {
 
@@ -61,31 +62,18 @@
     margin-left: 50px;
     }
 
-
-
 </style>
 </style>
 <head>
-    <title>Cardio Assistant</title>
+    <title>Lung Cancer Assistant</title>
   </head>
 <link rel="stylesheet" href="../static/style.css">
 
+<form action='/lungcancerprediction' method='POST'>
+    <h1>Lung Cancer Virtual Assistant </h1>
 
-<form action='/predictcardio' method='POST'>
-    <h1>Cardiovascular Disease Virtual Assistant </h1>
     <p>Enter your age</p>
-    <p><input type='number' name='Age' min="0" max="100" /></p>
-    <p>Enter your height (In total inches)</p>
-    <p><input type='number' name='Height' /></p>
-    <p>Enter your weight (In pounds)</p>
-    <p><input type='number' name='Weight' /></p>
-    <p>Gender (1 for Female, 2 for Male)</p>
-    <p><input type='number' name='Gender' /></p>
-    <p>Estimated Cholesterol Level (1 for normal, 2 for above normal, 3 for well above normal)</p>
-    <p><input type='number' name='Cholesterol' /></p>
-    <p>Estimated Glucose level (1 for normal, 2 for above normal, 3 for well above normal)</p>
-    <p><input type='number' name='Glucose' /></p>
-
+    <p><input type='number' name='Age' /></p>
     <p><b>Do you smoke often?</b></p>
     <div style="margin-left: 50px;">
         <input type="checkbox" id="Yess" name="Yess">
@@ -93,9 +81,8 @@
     </div>
     <div style="margin-left: 50px;">
         <input type="checkbox" id="Nos" name="Nos">
-        <label for="Nos">No</label>
+        <label for="Noalc">No</label>
     </div>
-
     <p><b>Do you drink alcohol often?</b></p>
     <div style="margin-left: 50px;">
         <input type="checkbox" id="Yesalc" name="Yesalc">
@@ -105,21 +92,28 @@
         <input type="checkbox" id="Noalc" name="Noalc">
         <label for="Noalc">No</label>
     </div>
-
-    <p><b>Are you physically active everyday?</b></p>
+    <p><b>Does your family have a history of lung cancer?</b></p>
     <div style="margin-left: 50px;">
-        <input type="checkbox" id="Yesa" name="Yesa">
-        <label for="Yesa">Yes</label>
+        <input type="checkbox" id="Yeslc" name="Yeslc">
+        <label for="Yeslc">Yes</label>
     </div>
     <div style="margin-left: 50px;">
-        <input type="checkbox" id="Noa" name="Noa">
-        <label for="Noa">No</label>
+        <input type="checkbox" id="Nolc" name="Nolc">
+        <label for="Nolc">No</label>
+    </div>
+    <p><b>Do you normally eat a balanced diet?</b></p>
+    <div style="margin-left: 50px;">
+        <input type="checkbox" id="Yesd" name="Yesd">
+        <label for="Yesd">Yes</label>
+    </div>
+    <div style="margin-left: 50px;">
+        <input type="checkbox" id="Nod" name="Nod">
+        <label for="Nod">No</label>
     </div>
 
     <p><input type="submit" class="button" value="Get Results"></p>
 </form>
 
 <p style='margin-left: 200px;'><a href="/" style='margin-left: 50px;'>Click Here to go back to the Home Page</a></p>
-
 
 {% endblock %}

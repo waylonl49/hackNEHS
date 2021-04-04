@@ -10,6 +10,95 @@ model = pickle.load(open('model.pkl', 'rb'))
 def homepage():
     return render_template("index.html")
 
+@app.route("/height")
+def height():
+    return render_template("height.html")
+
+@app.route('/predictheight', methods=["POST", "GET"])
+def heightpredictions():
+    momheight = request.form['mother']
+    dadheight = request.form['father']
+    gender = ""
+    if request.form.get('Malegender'):
+        gender = 'Male'
+    
+    elif request.form.get('Femalegender'):
+        gender = 'Female'
+
+    momheight = int(momheight)
+    dadheight = int(dadheight)
+
+    predheight = 0
+
+    predheight += momheight+dadheight
+    if gender == 'Male':
+        predheight += 5
+    elif gender == 'Female':
+        predheight -=5
+    
+    predheight /= 2
+
+    return render_template('predictheight.html', predheight=f'Your predicted height is {predheight} inches', mheight=momheight, fheight=dadheight)
+
+
+@app.route("/lungcancer")
+def age():
+    return render_template("lungcancer.html")
+
+@app.route("/lungcancerprediction", methods=["POST", "GET"])
+def lungcancerprediction():
+    age = request.form["Age"]
+    age = int(age)
+    newsmoke = ''
+    newalcohol = ''
+    newfamily = ''
+    newdiet = ''
+
+    total = 0
+
+    if request.form.get("Yess"):
+        total += 1
+        newsmoke = 'Yes'
+    else:
+        newsmoke = 'No'
+    
+    if request.form.get("Yesalc"):
+        total += 1
+        newalcohol = "Yes"
+    else:
+        newalcohol = 'No'
+        
+    if request.form.get("Yeslc"):
+        total += 1
+        newfamily = "Family History"
+    else:
+        newfamily = 'No Family History'
+
+    if request.form.get("Yesd"):
+        total += 1
+        newdiet = 'Healthy Diet'
+    else:
+        newdiet = "Unhealthy Diet"
+    
+    print(total)
+    print(age)
+
+    if total >= 3 and age >= 55:
+        return render_template("truelungcancer.html", 
+        age=age,
+        newsmoke=newsmoke,
+        newalcohol=newalcohol,
+        newfamily=newfamily,
+        newdiet=newdiet)
+
+    else:
+        return render_template("falselungcancer.html", 
+        age=age,
+        newsmoke=newsmoke,
+        newalcohol=newalcohol,
+        newfamily=newfamily,
+        newdiet=newdiet)
+
 @app.route("/about")
 def about():
     return render_template("about.html")
@@ -93,7 +182,6 @@ def predictcar():
         elif alcohol == 1:
             newalc = "Yes"
 
-        
         if active == 0:
             newact = "No"
         elif active == 1:
@@ -127,8 +215,7 @@ def predictcar():
             smoke = newsm,
             alcohol = newalc,
             active=newact)
-
-
+           
 @app.route('/predictcovid', methods=['POST', 'GET'])
 def predict():
     if request.method == 'POST':
