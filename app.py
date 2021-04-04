@@ -70,14 +70,15 @@ def lungcancerprediction():
         
     if request.form.get("Yeslc"):
         total += 1
-        newfamily = "Family History"
+        newfamily = "Yes Family History"
     else:
         newfamily = 'No Family History'
 
     if request.form.get("Yesd"):
-        total += 1
+        
         newdiet = 'Healthy Diet'
     else:
+        total +=1
         newdiet = "Unhealthy Diet"
     
     print(total)
